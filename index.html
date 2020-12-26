@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>Visualize Data with a Heat Map</title>
+  </head>
+  <body>
+    <h1 id='title'>Monthly Global Land-Surface Temperature</h1>
+    <h2 id='description'>Temperatures from 1753 - 2015 . Average is 8.66C</h2>
+    <div id='tooltip'></div>
+    <svg id='canvas'></svg>
+    <svg id='legend'>
+      <g>
+        <rect x="10" y="0" width="40" height="40" fill="#1F361D"></rect>
+        <text x="60" y="25" fill="#141E12">Variance of -1 or less</text>
+      </g>
+      <g>
+        <rect x="10" y="40" width="40" height="40" fill="#141E12"></rect>
+        <text x="60" y="65" fill="#141E12">On or Below Average</text>
+      </g>
+      <g>
+        <rect x="10" y="80" width="40" height="40" fill="#729B6E"></rect>
+        <text x="60" y="105" fill="#141E12">Above Average</text>
+      </g>
+      <g>
+        <rect x="10" y="120" width="40" height="40" fill="#34E54A"></rect>
+        <text x="60" y="145" fill="#141E12">Variance of +1 or more</text>
+      </g>
+    </svg>
+  </body>
+  <script defer src='index.js'></script>
+  <script defer src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+</html>
